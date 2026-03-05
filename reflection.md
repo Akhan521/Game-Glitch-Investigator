@@ -18,8 +18,16 @@ It appeared to look like a normal number guessing game, but the hints were not c
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+
+I used Claude Code as my primary AI tool for this project. I found it to be extremely helpful in refactoring our project's code and addressing the bugs we encountered. I didn't use any other AI tools for this project.
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+
+One example of a correct AI suggestion was when I asked Claude Code to refactor the game logic out of app.py into logic_utils.py. Claude Code suggested a clear way to separate the game logic from the Streamlit app code, which cleanly organized game logic in logic_utils.py and UI code in app.py. I verified the result by running the game after the refactor and confirming that everything still worked as expected. 
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+
+One example of an incorrect AI suggestion was when I asked Claude Code to fix the issue of resetting the game state. Claude Code suggested a solution in which we reset attempts to 1 instead of 0 when starting a new game. This was incorrect because it caused the attempts count to be off by one, leading to an inaccurate display of attempts left. I verified the result by running the game and noticing that the attempts count was always one less than it should be. I corrected it by changing the reset value to 0, to show the correct number of attempts left when starting a new game.
 
 ---
 
