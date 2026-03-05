@@ -5,8 +5,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+
+It appeared to look like a normal number guessing game, but the hints were not correct. The text on the screen was also problematic, in the sense that toggling between different modes didn't update the text as expected. I also noticed that the new game button didn't work as intended, as it didn't reset the game nor the hints properly.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+
+  I felt as thought the hints were not accurate; possibly, they could be flipped. For example, the secret was 57, yet any number below 57 caused the hint to say "Go lower". I also noticed that the text on the screen didn't update when I toggled between different modes, which was confusing. A third bug I noticed was that the new game button didn't truly reset the game (hints were not reset properly). I'm certain there are more bugs, but these were the first ones that I noticed when I ran the game for the first time.
 
 ---
 
