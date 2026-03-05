@@ -5,7 +5,7 @@ def get_range_for_difficulty(difficulty: str):
     if difficulty == "Normal":
         return 1, 100
     if difficulty == "Hard":
-        return 1, 50
+        return 1, 200
     return 1, 100
 
 
@@ -41,6 +41,7 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
+    # FIX: Swapped inverted hint messages so "Too High" says Go LOWER and "Too Low" says Go HIGHER using Claude Code
     try:
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
