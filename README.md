@@ -25,14 +25,24 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+Game's Purpose: To investigate and fix bugs in a Streamlit number guessing game, while reflecting on the debugging and AI-assisted development process.
+
+Bugs Fixed:
+- The hints were incorrect (e.g., "Go lower" when the guess was actually too low).
+- Reset logic for the game state was flawed (e.g., status, score, history were not properly reset on new game).
+- Changing difficulty mid-game did not update the secret number range or reset the game state.
+- The attempts count was off by one due to incorrect reset value.
+- Of course, there are likely more bugs that I haven't tackled yet, but these were the main ones I focused on fixing.
+
+Fixes Applied:
+- Refactored the code to separate game logic into `logic_utils.py` for better organization and maintainability.
+- Updated the hint logic to correctly reflect whether the guess is too low, too high, or correct.
+- Implemented proper reset logic to ensure that all relevant session state variables (status, score, history) are reset when starting a new game.
+- Made the secret number range dynamic based on the selected difficulty level, and ensured that changing difficulty mid-game resets the game state appropriately.
+- Corrected the reset value for attempts to 0 instead of 1 to accurately reflect the number of attempts left when starting a new game.
 
 ## 📸 Demo
 
 <img width="1919" height="911" alt="winning_game" src="https://github.com/user-attachments/assets/99b569ec-f201-4661-bc3c-41d31c1006ec" />
 
-## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]

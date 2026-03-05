@@ -43,8 +43,16 @@ One example of an incorrect AI suggestion was when I asked Claude Code to fix th
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+
+The secret number kept changing in the original app because it was being generated inside the main body of the Streamlit app (which runs on every interaction). Since Streamlit reruns the entire script on every user interaction, the secret number was being regenerated each time.
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+
+Streamlit "reruns" means that every time a user interacts with the app (like clicking a button), Streamlit reruns the entire script. Moreover, session state is a way to store information across these reruns. It allows you to keep track of variables (like the secret number) even as the app reruns, we can maintain the state of the game across user interactions. Without session state, any variables defined in the script would reset to their initial values on every rerun, which is why the secret number kept changing in the original app.
+
 - What change did you make that finally gave the game a stable secret number?
+
+The change I made was to store the secret number in Streamlit's session state only once, when the game is initialized, reset, or the game difficulty is changed. This way, the secret number is generated and stored correctly. I also made sure to reset the secret number and other relevant session state variables properly when starting a new game or changing difficulty, to ensure that the game behaves as expected without unintended side effects.
 
 ---
 
@@ -52,5 +60,13 @@ One example of an incorrect AI suggestion was when I asked Claude Code to fix th
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+
+One habit I want to reuse in future projects is the practice of refactoring code to separate concerns. For example, moving game logic into a separate file helps keep code organized, while keeping UI code clean and separated from the logic. This makes it easier to maintain and debug code in the future. I also want to continue using AI tools like Claude Code for refactoring and debugging because they can provide helpful suggestions and save time.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+
+One thing I would do differently next time is to be more thorough in my initial exploration phase, so that I can plan out a more detailed strategy for how to address bugs effectively. I would also try to ask more specific questions to the AI to get more targeted suggestions, rather than relying on more general prompts. Additionally, I would make sure to verify AI suggestions more carefully before implementing them, to avoid introducing new bugs or issues.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+This project made me realize just how incredibly useful AI tools are in debugging code and identifying issues that I might have missed on my own. It also made me more aware of the importance of verifying AI suggestions, as they can sometimes be incorrect or misleading. Overall, I now see AI-generated code as a powerful tool that can enhance my development process, but it still requires careful consideration and testing to ensure that it works correctly.
